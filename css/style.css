@@ -2,6 +2,10 @@
   --font: 'Nunito', sans-serif;
 }
 
+/* * {
+  outline: 4px solid rgb(206, 58, 58);
+} */
+
 body {
   font-family: var(--font);
   /* background-color: #F4F1DE; */
@@ -15,7 +19,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 25px;
-  width: 1570px;
+  max-width: 1570px;
 }
 
 /* ======================================== */
@@ -44,6 +48,14 @@ body {
   align-items: center;
   gap: 5px;
   width: fit-content;
+}
+
+.header__geo a {
+  transition: color .2s;
+}
+
+.header__geo a:hover {
+  color: #FF8C00;
 }
 
 .header__logo {
@@ -78,6 +90,7 @@ body {
 .header__inner-container {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
   z-index: 2;
 }
 
@@ -85,6 +98,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-right: 150px;
   font-size: 70px;
   max-width: 700px;
 }
@@ -229,6 +243,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 70px 0;
+  position: relative;
+
 }
 
 .recommend__container {
@@ -381,4 +397,93 @@ body {
   width: fit-content;
   user-select: none;
   color: #FF8C00;
+}
+
+/* ======================================== */
+/* ======================================== */
+/* ======================================== */
+
+@media (max-width: 1575px) {
+
+  .header__container,
+  .recommend__container {
+    width: 100vw;
+  }
+
+  .recommend__column {
+    font-size: 20px;
+  }
+
+  .recommend__column-img img {
+    object-fit: cover;
+    width: 270px;
+    height: 270px;
+  }
+
+  .recommend__column--info-title {
+    font-size: 22px;
+  }
+
+  .recommend__column--info-price {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 1440px) {
+  .header__inner-text {
+    margin-right: 0;
+  }
+
+  .header__inner-text {
+    font-size: 60px;
+  }
+
+  .header__inner-info-col svg {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .header__inner-text p {
+    max-width: 550px;
+    font-size: 25px;
+  }
+
+  .recommend__column {
+    padding: 10px 10px 25px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .header__inner-container {
+    gap: 30px;
+  }
+
+  .header__inner-text {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .header__inner {
+    height: 72vh;
+  }
+
+  .header__inner:before {
+    background-color: rgba(0, 0, 0, .7);
+  }
+
+  .header__inner-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__inner-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 610px) {
+  
 }
