@@ -58,7 +58,7 @@ body {
   display: flex;
   color: #fff;
   padding: 70px 0;
-  background: url('/images/pizza-header.jpg') fixed;
+  background: url('../images/pizza-header.jpg') fixed;
   background-size: cover;
   background-position: center;
   height: 50vh;
